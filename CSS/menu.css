@@ -1,0 +1,148 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra horizontal */
+header {
+    background-color: black;
+    color: white;
+    height: auto;
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Esto separa los elementos */
+    padding: 0 20px;
+    position: relative; /* Añadido para posicionar el menú desplegable en relación a este contenedor */
+}
+
+
+.dropdown {
+    margin-right: 20px; /* Añadido para separar el menú de la imagen */
+}
+
+.dropdown-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header-content img {
+    height: 90px;
+    width: auto;
+    margin-right: 20px; /* Añadido para separar la imagen del nombre */
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: right; /* Alinea el nombre a la derecha */
+    flex-grow: 1; /* Hace que el nombre ocupe el espacio restante */
+}
+
+header span {
+    font-weight: bold;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Esto coloca el menú justo debajo del botón */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    width: 150px;
+    z-index: 1000; /* Asegura que el menú se muestre por encima de otros elementos */
+}
+
+.dropdown-menu li {
+    margin: 10px 0;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+    padding: 5px;
+}
+
+/* Mostrar el menú desplegable cuando se haga clic */
+.dropdown.show .dropdown-menu {
+    display: block;
+}
+
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #ddd;
+}
+
+.textoEncabezado {
+    font-size: 1.5em;         /* Tamaño del texto */
+    font-weight:bold;        /* Peso de la fuente */
+    color: white;             /* Color del texto */
+    margin-left: auto;        /* Lo empuja hacia la derecha */
+    text-align: right;        /* Alineación del texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
+}
+
+.menu-icon {
+    height: 20px;
+    width: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.logo-ajustado {
+    height: 7000px; /* Ajusta este valor según el tamaño que quieras */
+    width: auto;
+    object-fit: contain;
+}
+
+
+

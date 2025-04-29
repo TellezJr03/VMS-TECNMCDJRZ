@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url("../MULTIMEDIA/fondo_login.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+header,
+footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    width: 20%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.login-box {
+    width: 100%;
+    background: #1031b4dc;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: navy;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: darkblue;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: navy;
+    text-decoration: none;
+    font-weight: bold;
+}
+
