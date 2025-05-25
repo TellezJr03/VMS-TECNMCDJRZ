@@ -1,0 +1,116 @@
+/* Estilos para la página de editar visita */
+.editar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+.form-buttons {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #337ab7;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #286090;
+}
+
+.btn-default {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+.btn-default:hover {
+    background-color: #e9ecef;
+}
+
+.btn-success {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.btn-success:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilos para la tabla de invitados */
+.table-responsive {
+    margin: 20px 0;
+}
+
+/* Estilos para los botones de acción en la tabla */
+.btn-action {
+    padding: 5px 10px;
+    margin: 0 3px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .editar-container {
+        padding: 15px;
+    }
+    
+    .form-buttons {
+        text-align: center;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

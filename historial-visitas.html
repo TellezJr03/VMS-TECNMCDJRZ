@@ -4,41 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu VMS ITCJ</title>
+    <title>Historial de Visitas - VMS ITCJ</title>
     <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/historial-visitas.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
     
    <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
-        <!-- Encabezado del navbar -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand title" href="#">
+            <a class="navbar-brand title" href="menu.html">
                 <img src="/MULTIMEDIA/logo_negro.png" alt="ITCJ Logo" class="logo-ajustado">
                 VMS ITCJ
             </a>
         </div>
         
-        <!-- Contenido del navbar -->
         <div class="collapse navbar-collapse" id="myNavbar">
-            <!-- Menú principal -->
             <ul class="nav navbar-nav">
-                <li><a href="/crear-visita.html" id="nav-op2">Crear visita</a></li>
-                <li><a href="/crear-invitado.html" id="nav-op3">Crear invitado</a></li>
-                <li><a href="/historial-visitas.html" id="nav-op4">Historial de visitas</a></li>
-                <li><a href="/ver-invitados.html" id="nav-op5">Ver invitados</a></li>
+                <li><a href="#" id="nav-op1">Ver visitas</a></li>
+                <li><a href="#" id="nav-op2">Crear visita</a></li>
+                <li><a href="#" id="nav-op3">Crear invitado</a></li>
+                <li><a href="#" id="nav-op4">Historial de visitas</a></li>
+                <li><a href="#" id="nav-op5">Ver invitados registrados</a></li>
             </ul>
             
-            <!-- Menú derecho -->
             <ul class="nav navbar-nav navbar-right">
                 <li class="navbar-text">
                     <span class="glyphicon glyphicon-user"></span> 
@@ -51,24 +50,32 @@
 </nav>
 
     <main class="main-content">
-        <h2>Listado de Visitas</h2>
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                        <th>Motivo</th>
-                        <th>Estatus</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="visitas-table-body">
-                    <!-- Los datos se llenarán dinámicamente desde JavaScript -->
-                </tbody>
-            </table>
+        <div class="historial-container">
+            <h2>Historial de Visitas</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <h3>Visitas este mes</h3>
+                        <canvas id="visitasMesChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <h3>Visitas esta semana</h3>
+                        <canvas id="visitasSemanaChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chart-container">
+                        <h3>Usuarios con más visitas esta semana</h3>
+                        <canvas id="topUsuariosChart"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -97,7 +104,7 @@
         </div>
     </footer>
 
-    <script src="JAVASCRIPT/menu.js"></script>
+    <script src="JAVASCRIPT/historial-visitas.js"></script>
     <script src="/JAVASCRIPT/logout.js"></script>
 </body>
 

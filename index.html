@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi Proyecto con Bootstrap</title>
+  <title>VMS ITCJ</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="CSS/index.css">
   <link rel="icon" href="favicon.ico">
@@ -34,5 +34,11 @@
   </main>
 
   <script src="JAVASCRIPT/index.js"></script>
+      <script>
+        // Mostrar mensaje si viene de un cierre de sesión
+        if (document.referrer.includes("menu.html")) {
+            alert("Has cerrado sesión correctamente");
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+/* Estilos para la página de crear invitado */
+.crear-invitado-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-buttons {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #4cae4c;
+}
+
+.btn-default {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+.btn-default:hover {
+    background-color: #e9ecef;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .crear-invitado-container {
+        padding: 15px;
+    }
+    
+    .form-buttons {
+        text-align: center;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

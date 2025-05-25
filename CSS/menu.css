@@ -3,146 +3,282 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-/* Barra horizontal */
-header {
-    background-color: black;
-    color: white;
-    height: auto;
-    padding: 10px 0;
-    width: 100%;
-}
-
-
-.header-content {
+    padding-top: 70px; /* Para compensar el navbar fijo */
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Esto separa los elementos */
-    padding: 0 20px;
-    position: relative; /* Añadido para posicionar el menú desplegable en relación a este contenedor */
+    flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar-inverse {
+    background-color: #000;
+    border-color: #000;
 }
 
 
-.dropdown {
-    margin-right: 20px; /* Añadido para separar el menú de la imagen */
-}
-
-.dropdown-btn {
-    background-color: #000000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.header-content img {
-    height: 90px;
+.logo-ajustado {
+    height: 40px;
     width: auto;
-    margin-right: 20px; /* Añadido para separar la imagen del nombre */
-}
-
-.header-content h1 {
-    margin: 0;
-    font-size: 1.5em;
-    text-align: right; /* Alinea el nombre a la derecha */
-    flex-grow: 1; /* Hace que el nombre ocupe el espacio restante */
-}
-
-header span {
-    font-weight: bold;
-}
-
-/* Menú desplegable */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; /* Esto coloca el menú justo debajo del botón */
-    left: 0;
-    background-color: white;
-    border: 1px solid #ddd;
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
-    width: 150px;
-    z-index: 1000; /* Asegura que el menú se muestre por encima de otros elementos */
-}
-
-.dropdown-menu li {
-    margin: 10px 0;
-}
-
-.dropdown-menu a {
-    text-decoration: none;
-    color: black;
-}
-
-.dropdown-menu a:hover {
-    background-color: #ddd;
-    padding: 5px;
-}
-
-/* Mostrar el menú desplegable cuando se haga clic */
-.dropdown.show .dropdown-menu {
-    display: block;
-}
-
-
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2em;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-}
-
-a:hover {
-    background-color: #ddd;
-}
-
-.textoEncabezado {
-    font-size: 1.5em;         /* Tamaño del texto */
-    font-weight:bold;        /* Peso de la fuente */
-    color: white;             /* Color del texto */
-    margin-left: auto;        /* Lo empuja hacia la derecha */
-    text-align: right;        /* Alineación del texto */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
-}
-
-.menu-icon {
-    height: 20px;
-    width: auto;
-    cursor: pointer;
     margin-right: 10px;
 }
 
-.logo-ajustado {
-    height: 7000px; /* Ajusta este valor según el tamaño que quieras */
-    width: auto;
-    object-fit: contain;
+/* Navbar Centrado Verticalmente */
+.navbar {
+    min-height: 70px;
 }
 
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+}
 
+.navbar-header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    float: none;
+}
 
+.navbar-brand.title {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    float: none;
+    margin: 0;
+}
+
+.navbar-nav > li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav > li > a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.navbar-right {
+    margin-right: 0;
+}
+
+.navbar-text {
+    padding: 25px 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.navbar-toggle {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-header {
+        float: left;
+    }
+    
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar-nav > li > a {
+        height: auto;
+    }
+    
+    .navbar-text {
+        height: auto;
+        padding: 15px;
+    }
+}
+
+/* Main content */
+.main-content {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.main-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.main-content ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.main-content li {
+    margin: 15px 0;
+}
+
+.main-content a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+}
+
+.main-content a:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: auto;
+}
+
+.footer-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.footer h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand.title {
+        padding: 15px 5px;
+    }
+    
+    .footer .col-md-4 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+/* Añade esto al final de tu menu.css */
+
+/* Table styles */
+.table-responsive {
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+.table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.table-bordered th, 
+.table-bordered td {
+    border: 1px solid #ddd;
+}
+
+/* Botones de acción */
+.btn-action {
+    padding: 5px 10px;
+    margin: 0 3px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.btn-view {
+    background-color: #5bc0de;
+    color: white;
+}
+
+.btn-edit {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .table th, 
+    .table td {
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+}

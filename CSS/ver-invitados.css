@@ -1,0 +1,38 @@
+/* Estilos para la página de ver invitados */
+.invitados-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para la tabla */
+.table-responsive {
+    margin: 20px 0;
+}
+
+/* Estilos para los botones de acción */
+.btn-action {
+    padding: 5px 10px;
+    margin: 0 3px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .invitados-container {
+        padding: 15px;
+    }
+}
